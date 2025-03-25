@@ -1,10 +1,7 @@
-project('fft2d', 'cpp', default_options : ['default_library=static',
-                                         'buildtype=debugoptimized',
-                                         'warning_level=1',
-                                         'cpp_std=gnu++14'])
+project('fft2d', 'c', default_options : ['default_library=shared'])
 
 if not meson.is_subproject() 
-  cc = meson.get_compiler('cpp')
+  cc = meson.get_compiler('c')
 endif
 
 include = include_directories('.')

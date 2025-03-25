@@ -15,7 +15,7 @@ fft2d = library('fft2d',
   fft2d_sources,
   include_directories : [include],
   install : true,
-  link_args : [],
+  link_args : ['-lm'],
 )
 
 fft2d_dep = declare_dependency(
